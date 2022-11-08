@@ -564,7 +564,7 @@ void init_draw() {
 }
 // draw the grid lines
 void draw_grid() {
-    // image[0]:­ì¥»¨S¦³®æ½uªº¹Ï
+    // image[0]:åŸæœ¬æ²’æœ‰æ ¼ç·šçš„åœ–
     file_id = 0;
     save_func(file_id);
     glColor3f(grid_color, grid_color, grid_color);
@@ -584,7 +584,7 @@ void draw_grid() {
         glVertex2f(x, height - 100);
         glEnd();
     }
-    // image[1]:¤W¤F®æ½u«áªº¹Ï
+    // image[1]:ä¸Šäº†æ ¼ç·šå¾Œçš„åœ–
     file_id = 1;
     save_func(1);
     int gc = 204;
@@ -600,13 +600,13 @@ void draw_grid() {
             if (y < 100)image[1][cur][0] = image[1][cur][1] = image[1][cur][2] = 255;
 
             if (image[7][cur][0] == gc) {
-                // ­Y­ì¥»¦b²{¦b­n¥[®æ½uªº¦a¤è´N¦³¦Û¤vªºÃC¦â-> «O«ùimage[1]ªºÃC¦â
+                // è‹¥åŸæœ¬åœ¨ç¾åœ¨è¦åŠ æ ¼ç·šçš„åœ°æ–¹å°±æœ‰è‡ªå·±çš„é¡è‰²-> ä¿æŒimage[1]çš„é¡è‰²
                 if (!(image[0][cur][0] == 255 && image[0][cur][1] == 255 && image[0][cur][2] == 255)) {
                     image[1][cur][0] = image[0][cur][0];
                     image[1][cur][1] = image[0][cur][1];
                     image[1][cur][2] = image[0][cur][2];
                 }
-                else {// §_«h µe¤W®æ½u
+                else {// å¦å‰‡ ç•«ä¸Šæ ¼ç·š
                     image[1][cur][0] = image[1][cur][1] = image[1][cur][2] = gc;
                 }
             }
@@ -1044,7 +1044,7 @@ void mouse_func(int button, int state, int x, int y) {
                 side++;
             }
             else {
-                // ³sÂI¨â¤U´N¥i¥Hµe¦npolyÅo(©M«e¤@­ÓÂI°Ò«¢¹y¶ZÂ÷<2)
+                // é€£é»å…©ä¸‹å°±å¯ä»¥ç•«å¥½polyå›‰(å’Œå‰ä¸€å€‹é»æ›¼å“ˆé “è·é›¢<2)
                 if (fabs(vertex[side - 1][0] - x) + fabs(vertex[side - 1][1] - y) < 2)
                     draw_polygon(myColor[0], myColor[1], myColor[2]);
                 else {
@@ -1103,7 +1103,7 @@ void mouse_func(int button, int state, int x, int y) {
                 side++;
             }
             else {
-                // ³sÂI¨â¤U´N¥i¥Hµe¦npolylines(©M«e¤@­ÓÂI°Ò«¢¹y¶ZÂ÷<2)
+                // é€£é»å…©ä¸‹å°±å¯ä»¥ç•«å¥½polylines(å’Œå‰ä¸€å€‹é»æ›¼å“ˆé “è·é›¢<2)
                 if (fabs(vertex[side - 1][0] - x) + fabs(vertex[side - 1][1] - y) < 2)
                     side = 0;
                 else {
@@ -1143,7 +1143,7 @@ void mouse_func(int button, int state, int x, int y) {
 /*
     reshape callback function for window.
     a window pops up,
-    the window¡¦s size(shape) is changed.
+    the windowâ€™s size(shape) is changed.
 */
 void my_reshape(int new_w, int new_h) {
     height = new_h, width = new_w;
