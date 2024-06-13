@@ -791,7 +791,7 @@ void stand_posture() {// set to initial stand posture
     step = cur_step = 0;
 }
 void jump() {// procedure for jump
-    // ÃÛ¤U¯b¤O
+    // ï¿½Û¤Uï¿½bï¿½O
     stand_posture();
     walk_start = 0;
     for (int i = 0; i < 20; i++) {
@@ -808,7 +808,7 @@ void jump() {// procedure for jump
         position[1] -= 0.1 / 5;
         display();
     }
-    // °_¸õ
+    // ï¿½_ï¿½ï¿½
     for (int i = 0; i < 20; i++) {
         leg_angle[0] -= 2;
         leg_angle[1] -= 2;
@@ -823,7 +823,7 @@ void jump() {// procedure for jump
         position[1] += 0.5 / 5;
         display();
     }
-    // ¤U¥h(-8)
+    // ï¿½Uï¿½h(-8)
     for (int i = 1; i < 17; i++) {
         position[1] -= (0.5 / 16 * i * i - 0.5 / 16 * (i - 1) * (i - 1)) / 5;
         display();
@@ -831,7 +831,7 @@ void jump() {// procedure for jump
 }
 void walk() {// procedure for walk
     if (!walk_start) {
-        // ¥u¦³ª½¥ß(µL¨¤«×)¤~¯à¶}©l¨«¸ô
+        // ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½Lï¿½ï¿½ï¿½ï¿½)ï¿½~ï¿½ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
         while (cur_step < min(5, step)) {
             cur_step++;
             leg_angle[0] += 5;
@@ -965,7 +965,7 @@ void walk_stop() {// procedure for walk stop
 }
 void run() {// procedure for run
     if (!walk_start) {
-        // ¥u¦³ª½¥ß(µL¨¤«×)¤~¯à¶}©l¶]¨B
+        // ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½Lï¿½ï¿½ï¿½ï¿½)ï¿½~ï¿½ï¿½}ï¿½lï¿½]ï¿½B
         while (cur_step < min(5, step)) {
             cur_step++;
             leg_angle[0] += 12;
@@ -1113,8 +1113,8 @@ void display() {
     //gluLookAt(40.0, 70.0, 55.0, 10.0, 0.0, 10.0, 0.0, 1.0, 0.0);
     //gluLookAt(45, 70, 55, 25.0, 0.0, 0.0, 0.0, 1.0, 0.0);
     //gluLookAt(5, 10, 10, 25.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-    //gluLookAt(0, 0, 0, 25.0, 0.0, 0.0, 0.0, 1.0, 0.0);// °¼­±µø¨¤
-    //gluLookAt(0, 0, -90, 0, 0.0, 0.0, 0.0, 1.0, 0.0);// ­I­±µø¨¤
+    //gluLookAt(0, 0, 0, 25.0, 0.0, 0.0, 0.0, 1.0, 0.0);// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //gluLookAt(0, 0, -90, 0, 0.0, 0.0, 0.0, 1.0, 0.0);// ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     if (bubble_cnt!=-1&&bubble_cnt<160) {
         if (bubble_cnt % 16 == 0) {
             bubble_special_effects();
